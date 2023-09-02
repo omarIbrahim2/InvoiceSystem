@@ -1,0 +1,76 @@
+#sidebarMenu{
+    height: calc(100vh - 40px);
+}
+
+.msg-close{
+    top: 2px;
+    right: 2px;
+    cursor: pointer;
+    transition: 1.2s;
+}
+
+
+.desc-col{
+  
+     max-width: 299px;
+     max-height: 40px;
+     position: relative;
+}
+
+
+.page-up{
+
+    position: absolute;
+    left: 2px;
+    top:10px;
+    cursor: pointer;
+   
+}
+
+.buttomCreate{
+    justify-self: left;
+}
+
+.totalInvoice{
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+.totalInvoice p{
+    
+    font-weight: bold;
+}
+
+
+
+.edit-icon:hover{
+    font-size: larger;
+}
+
+
+.edit-icon button{
+   border: none;
+   background-color: white;
+   color: yellowgreen;
+   cursor: pointer;
+   font-size: medium;
+   margin-left: 5px;
+
+
+
+}
+
+
+
+.delete-icon button{
+    border: none;
+    background-color: white;
+    color: brown;
+    cursor: pointer;
+    font-size: medium;
+    margin-right: 5px;
+}
+
+.delete-icon:hover{
+    font-size: larger;
+}
