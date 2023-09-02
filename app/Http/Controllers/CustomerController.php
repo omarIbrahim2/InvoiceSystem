@@ -15,7 +15,7 @@ class CustomerController extends Controller
     }
 
     public function index(){
-        $Customers = $this->CustomerRepoInterface->getCustomers(['id' , 'company_name' , 'email']);
+        $Customers = $this->CustomerRepoInterface->getCustomers(5 ,['id' , 'company_name' , 'email']);
         return view('Customers.index')->with(['Customers' => $Customers]);
     } 
     public function create(){

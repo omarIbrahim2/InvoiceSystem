@@ -8,5 +8,5 @@ interface CustomerRepoInterface{
 
     public function create(CustomerEntity $Customer);
 
-    public function getCustomers(...$attrs);
+    public function getCustomers( $pages  ,...$attrs);
 }

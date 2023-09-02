@@ -14,7 +14,10 @@ class CustomerRepo implements CustomerRepoInterface{
         return Customer::create($Customer->getAttributes());
     }
 
-    public function getCustomers(...$attrs){
+    public function getCustomers($pages , ...$attrs){
+      if ($pages == 0) {
+        return Customer::select(...$attrs)->get();
+      }
       return  Customer::select(...$attrs)->paginate(5);
     }
 }

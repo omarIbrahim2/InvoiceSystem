@@ -37,7 +37,7 @@ class InvoiceController extends Controller
 
     public function create(){
          
-        $Customers =  $this->CustomerRepoInterface->getCustomers(['id' , 'company_name']);
+        $Customers =  $this->CustomerRepoInterface->getCustomers( 0,['id' , 'company_name']);
         return view('Invoices.create')->with(['Customers' => $Customers]);
     }
 
