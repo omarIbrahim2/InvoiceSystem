@@ -31,6 +31,10 @@
             @endforeach
 
         </tbody>
+
+        <div class="d-flex justify-content-center">
+            {!! $Customers->links() !!}
+        </div>
       </table>
   
 

@@ -16,11 +16,12 @@ class InvoiceCalculations implements InvoiceCalculateTotalInterface{
               $total+=$product->price * $product->pivot->quantity;
           }
 
-          $totalwithTax = $total * $invoice->tax;
+          if($invoice->tax > 0){
+              $total *= $invoice->tax;
+          }
+
+          $totalWithDiscountPercentage = $total * $invoice->discount;
     
-          $total =  abs(($totalwithTax * $invoice->discount) - $totalwithTax);  
-
-
-          return $total;      
+          return  abs($total - $totalWithDiscountPercentage);      
     }
 }
